@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GoLiveMovieRepository {
+public class GoLiveMovieRepository implements MovieRepositoryInterface{
 
     private List<Movie> movies = new ArrayList<>();
 
-    public void add (Movie movie){
+    public void add(Movie movie){
         FileWriter writer;
         try{
             writer=new FileWriter("C:\\temp\\movies.txt",true);
