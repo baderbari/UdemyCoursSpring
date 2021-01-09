@@ -1,0 +1,4 @@
+core\entity\Movie.class
+core\service\MovieService.class
+core\repository\MovieRepository.class
+core\App.class
