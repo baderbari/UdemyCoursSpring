@@ -1,5 +1,6 @@
 package core;
 
+import core.controller.MovieController;
 import core.entity.Movie;
 import core.service.MovieService;
 
@@ -13,18 +14,8 @@ public class App
 {
     public static void main( String[] args )
     {
+        MovieController movieController= new MovieController();
+        movieController.addUsingConsole();
 
-
-        System.out.println( "What is the name of the movie" );
-
-        Scanner sc= new Scanner(System.in);
-        String movietitle =sc.nextLine();
-        Movie movie = new Movie();
-        movie.setTitle(movietitle);
-        System.out.println( "What is the genre of the movie" );
-        String moviegenre =sc.nextLine();
-        movie.setGenre(moviegenre);
-        MovieService movieService= new MovieService();
-        movieService.registerMovie(movie);
     }
 }
